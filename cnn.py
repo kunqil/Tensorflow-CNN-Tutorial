@@ -73,7 +73,7 @@ dropout_fc = tf.layers.dropout(fc, dropout_placeholdr)
 # 未激活的输出层
 logits = tf.layers.dense(dropout_fc, num_classes)
 
-predicted_labels = tf.arg_max(logits, 1)
+predicted_labels = tf.argmax(logits, 1)
 
 
 # 利用交叉熵定义损失
